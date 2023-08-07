@@ -1,0 +1,217 @@
+// @font-face
+//   src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap')
+//   font-family: 'Open-sans'
+//   font-weight: 300
+// @font-face
+//   src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap')
+//   font-family: 'Open-sans'
+//   font-weight: 600
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800')
+
+$black-olive: #423f38
+$light-olive: #635f55
+$platinum: #e7e8e6
+$white: #fff
+$caramel: #D17D44
+$ecru: #BAAF83
+$red-orange: #B22B18
+
+// Global Styling
+html
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif, verdana
+  font-weight: 300
+  background-color: $white
+  color: $black-olive
+
+/* Headings */
+h1
+  font-size: 24px
+  font-weight: 600
+  margin: 20px 0
+  color: $red-orange
+
+h2
+  font-size: 20px
+  font-weight: 600
+  margin: 16px 0
+  color: $black-olive
+
+h3
+  font-size: 18px
+  font-weight: 600
+  margin: 12px 0
+  color: $black-olive
+
+/* Links */
+a
+  text-decoration: none
+
+a:hover
+  text-decoration: underline
+
+/* Lists */
+ul,
+ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+li
+  margin-bottom: 8px
+
+/* Paragraphs */
+p
+  line-height: 1.5
+
+input,
+select,
+textarea
+  width: 100%
+  padding: 8px
+  border: 1px solid #ccc
+  border-radius: 4px
+  margin-bottom: 8px
+  font-size: 20px
+  text-align: center
+  font-family: Arial, Helvetica, sans-serif
+
+button
+  border: 0
+  background: none
+  border: none
+  padding: 0
+  font: inherit
+  cursor: pointer
+  outline: inherit
+
+
+// App Styles
+.container
+  width: 100%
+  height: 100%
+  display: flex
+
+
+
+// Header Styles
+nav
+  height: 5rem
+  display: flex
+  justify-content: center
+  padding: 0.5rem
+  img
+    height: 100%
+    width: auto
+
+// Map Container
+.map-section
+  width: 80%
+  height: calc(100vh - 6rem)
+  background-color: $platinum
+  .map-container
+    width: 100%
+    height: 100%
+
+
+// Pizzeria List
+.pizzeria-list
+  width: 20%
+  min-width: 30rem
+  height: calc(100vh - 6rem)
+  max-height: 100%
+  background-color: $red-orange
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+  padding: 0 1rem 0 1rem
+  overflow: scroll
+  .chevron-container
+    height: 5rem
+    width: 100%
+    display: flex
+    justify-content: center
+    align-content: center
+    .chevron-icons
+      font-size: 2rem
+      color: $white
+      transition: 0.2s
+      &:hover
+        color: $ecru
+      &:active
+        color: $white
+        transition: 0s
+
+// Pizzeria Card
+.pizzeria-card
+  display: flex
+  justify-content: space-evenly
+  width: calc(100% - 2rem)
+  min-height: 12rem
+  background-color: $white
+  border-radius: 0.2rem
+  padding: 1rem
+  margin: 0.5rem 0 0.5rem 0
+  overflow: hidden
+  .pizzeria-info
+    width: 50%
+    height: 100%
+    cursor: pointer
+  .pizzeria-votes
+    width: 50%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    .like-buttons
+      font-size: 2rem
+      color: $light-olive
+      transition: 0.2s
+      &:hover
+        color: $black-olive
+      &:active
+        color: $light-olive
+        transition: 0s
+
+// Details Card
+.details-card
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  min-width: 30rem
+  height: calc(100vh - 6rem)
+  max-height: 100%
+  background-color: $white
+  overflow: hidden
+  div
+    width: 100%
+  .icon-container
+    background-color: $white
+    width: 100%
+    height: 1.5rem
+    padding: 1rem
+  .photo-container
+    background-image: url('https://user-images.githubusercontent.com/20684618/31289519-9ebdbe1a-aae6-11e7-8f82-bf794fdd9d1a.png')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 20rem
+    width: 100%
+    background-color: $white
+    overflow: hidden
+    .pizzeria-photo
+      object-fit: cover
+  .details-container
+    background-color: $white
+    padding: 0 1rem 0 1rem
+    h1
+      margin: 0
+    p
+      line-height: 2rem
+
+.exit-icon
+  font-size: 1.25rem
+
+
